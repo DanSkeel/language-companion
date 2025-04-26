@@ -7,12 +7,18 @@
     <style>
         body { font-family: sans-serif; padding: 20px; }
     </style>
+    <script>
+        // Automatically trigger the Readlang bookmarklet when page loads
+        window.onload = function() {
+            var readlangHostname = 'readlang.com';
+            var script = document.createElement('script');
+            script.setAttribute('src', window.location.protocol + '//readlang.com/src/translatorBookmarklet.js?bust=' + new Date().getTime());
+            document.getElementsByTagName('body')[0].appendChild(script);
+        };
+    </script>
 </head>
 <body>
     <p>This is a random English text used for testing the Readlang integration.</p>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png" alt="Test Image" width="100">
-    <script>
-      document.write('<script src="https://readlang.com/src/translatorBookmarklet.js?bust=' + new Date().getTime() + '"><\\/script>');
-    </script>
 </body>
 </html>
