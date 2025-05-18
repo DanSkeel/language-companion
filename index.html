@@ -10,9 +10,8 @@
     <script>
         // Automatically trigger the Readlang bookmarklet when page loads
         window.onload = function() {
-            var readlangHostname = 'readlang.com';
             var script = document.createElement('script');
-            script.setAttribute('src', window.location.protocol + '//readlang.com/src/translatorBookmarklet.js?bust=' + new Date().getTime());
+            script.setAttribute('src', 'https://readlang.com/src/embeddedWebReader.js?bust=c1643291c066ef40b5868f49bb50b329b1490a8d';
             document.getElementsByTagName('body')[0].appendChild(script);
         };
     </script>
